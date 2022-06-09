@@ -99,7 +99,7 @@
     #define X_MAX_PIN                E0_DIAG_PIN  // E0DET
   #endif
 #else
-  #define X_STOP_PIN                  X_DIAG_PIN  // X-STOP
+  #define X_STOP_PIN                  E2_DIAG_PIN   // Use this stop_6 so I can use diag pin for X driver
 #endif
 
 #ifdef Y_STALL_SENSITIVITY
@@ -117,7 +117,7 @@
     #define Y_MAX_PIN                E1_DIAG_PIN  // E1DET
   #endif
 #else
-  #define Y_STOP_PIN                  Y_DIAG_PIN  // Y-STOP
+  #define Y_STOP_PIN                  E3_DIAG_PIN  // Use this stop_7 so I can use diag pin for Y driver
 #endif
 
 #ifdef Z_STALL_SENSITIVITY
