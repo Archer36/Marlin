@@ -1010,7 +1010,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 415 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 402.82001, 410.97247 }  // non-standard z and e for bondtech and belted z
 
 /**
  * Default Max Feed Rate (linear=mm/s, rotational=°/s)
