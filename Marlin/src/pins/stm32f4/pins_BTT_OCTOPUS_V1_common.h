@@ -97,13 +97,13 @@
   #endif
 #elif EITHER(DUAL_X_CARRIAGE, NEEDS_X_MINMAX)
   #ifndef X_MIN_PIN
-    #define X_MIN_PIN                 X_DIAG_PIN  // X-STOP
+    #define X_MIN_PIN                 E2_DIAG_PIN   // Use this PG14/stop_6 so I can use diag pin for X driver
   #endif
   #ifndef X_MAX_PIN
-    #define X_MAX_PIN                E0_DIAG_PIN  // E0DET
+    #define X_MAX_PIN                 E1_DIAG_PIN   // Use this PG13/stop_5 so I can use diag pin for X driver// E0DET
   #endif
 #else
-  #define X_STOP_PIN                  X_DIAG_PIN  // X-STOP
+  #define X_STOP_PIN                  E2_DIAG_PIN   // Use this PG14/stop_6 so I can use diag pin for X driver
 #endif
 
 #ifdef Y_STALL_SENSITIVITY
@@ -121,7 +121,7 @@
     #define Y_MAX_PIN                E1_DIAG_PIN  // E1DET
   #endif
 #else
-  #define Y_STOP_PIN                  Y_DIAG_PIN  // Y-STOP
+  #define Y_STOP_PIN                  E3_DIAG_PIN  // Use this PG15/stop_7 so I can use diag pin for Y driver
 #endif
 
 #ifdef Z_STALL_SENSITIVITY
@@ -188,11 +188,11 @@
   #define Z_CS_PIN                          PC6
 #endif
 
-#define Z2_STEP_PIN                         PG4   // MOTOR 3
-#define Z2_DIR_PIN                          PC1
-#define Z2_ENABLE_PIN                       PA0
-#ifndef Z2_CS_PIN
-  #define Z2_CS_PIN                         PC7
+#define X2_STEP_PIN                         PG4   // MOTOR 3
+#define X2_DIR_PIN                          PC1
+#define X2_ENABLE_PIN                       PA0
+#ifndef X2_CS_PIN
+  #define X2_CS_PIN                         PC7
 #endif
 
 #define E0_STEP_PIN                         PF9   // MOTOR 4
@@ -300,8 +300,8 @@
   #define Z_SERIAL_TX_PIN                   PC6
   #define Z_SERIAL_RX_PIN        Z_SERIAL_TX_PIN
 
-  #define Z2_SERIAL_TX_PIN                  PC7
-  #define Z2_SERIAL_RX_PIN      Z2_SERIAL_TX_PIN
+  #define X2_SERIAL_TX_PIN                  PC7
+  #define X2_SERIAL_RX_PIN      X2_SERIAL_TX_PIN
 
   #define E0_SERIAL_TX_PIN                  PF2
   #define E0_SERIAL_RX_PIN      E0_SERIAL_TX_PIN

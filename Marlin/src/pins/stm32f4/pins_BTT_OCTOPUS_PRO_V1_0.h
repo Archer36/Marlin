@@ -23,6 +23,8 @@
 
 #define BOARD_INFO_NAME "BTT OCTOPUS PRO V1.0"
 
+#define ONBOARD_ENDSTOPPULLUPS                    // Board has built-in pullups
+
 //
 // Temperature Sensors
 //
